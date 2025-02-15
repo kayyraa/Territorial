@@ -1,0 +1,75 @@
+@import url("./format.css");
+
+body {
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: "Font", Arial;
+}
+
+span[button] {
+    height: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    align-content: center;
+    
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+span[button]:hover {
+    background-color: transparent;
+    backdrop-filter: initial;
+}
+
+button:disabled {
+    color: rgba(255, 255, 255, 0.25) !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+.Topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 8px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2em;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.Topbar > *:last-child {
+    margin-right: 8px;
+}
+
+.Frame {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    width: 100%;
+    height: calc(100% - 2em);
+}
+
+@font-face {
+    font-family: "Font";
+    src: url("../../fonts/Font.ttf") format("truetype");
+}

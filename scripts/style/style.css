@@ -1,0 +1,99 @@
+.Prompt {
+    transform: translate(-50%, -50%);
+
+    min-width: 50%;
+    max-width: 100%;
+
+    min-height: 50%;
+    max-height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.Prompt > .Topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-left: 8px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2em;
+
+    background-color: transparent;
+    backdrop-filter: initial;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    user-select: none;
+
+    z-index: 2;
+}
+
+.Prompt > .Topbar > span[button] {
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1 / 1;
+
+    text-align: center;
+}
+
+.Prompt > .Content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    position: absolute;
+    left: 0;
+    top: 2em;
+    height: calc(100% - 2em);
+
+    margin: 8px;
+}
+
+.Prompt > .Content textarea,
+.Prompt > .Content input[type="text"] {
+    outline: none;
+    background-color: transparent !important;
+    color: rgb(255, 255, 255);
+
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.Prompt > .Content button {
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
+
+.Prompt > .Content button,
+.Prompt > .Content textarea,
+.Prompt > .Content input[type="text"] {
+    padding: 0 8px 0 8px;
+    min-height: 2em;
+    max-height: 2em;
+}
+
+.Prompt > .Content button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Prompt > .Content header {
+    font-size: 2em;
+}
